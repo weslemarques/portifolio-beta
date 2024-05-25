@@ -1,0 +1,239 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    background: url('../assets/avatar-shapes.svg'),linear-gradient(to right, #141C47 77%, #5FDD74 23%) ;
+    background-repeat: no-repeat;
+    background-position:  right;
+    height: 100vh;
+    margin: 0;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.5s ease; /* Adiciona uma transição suave de transformação */
+    transform: translateY(0); 
+}
+
+.section1{
+    height: 100vh;
+}
+.section2{
+    height: 100vh;
+}
+nav{
+    text-align: center;
+    display: none;
+}
+
+.oculto{
+    display: none;
+}
+
+.content{
+    width: 50%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content h1{
+    font-size: 3em;
+    font-weight: 900;
+    color: #5FDD74;
+}
+
+.content h1 span{
+    color: #fff;
+}
+
+.content p{
+    font-size: 1em;
+}
+.container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+}
+
+.foto{
+    width: 50%;
+    width: 400px;
+    height: 400px;
+}
+
+
+.list-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.list-item a{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    padding: 8px;
+    color: #fff;
+    align-self: center;
+    margin: 5px 5px;
+    border: #5FDD74 2px solid;
+    border-radius: 5px;
+}
+
+.tecnologias{
+    display: flex;
+}
+
+.cabecalho{
+    width: 90%;
+    margin: 40px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.logo img{
+    width: 100px;
+    height: 30px;
+}
+
+
+.menu-hamburguer {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffffba;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 200px;
+    padding-top: 50px;
+    z-index: 1;
+  }
+
+  .menu-hamburguer a {
+    color: #141C47;
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .menu-hamburguer a:hover {
+    background-color: #ffffff;
+  }
+
+  .hamburguer {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-around;
+    top: 45px;
+    right: 40px;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .menu-hamburguer.active {
+    display: flex;
+  }
+
+  .hamburguer div {
+    width: 30px;
+    height: 3px;
+    background-color: #141C47;
+    transition: 0.3s;
+  }
+
+  .active .linha1 {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .active .linha2 {
+    opacity: 0;
+  }
+
+  .active .linha3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  footer{
+    width: 90%;
+    margin: 40px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+#content-project{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.projetos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card{
+    margin: 10px;
+}
+
+.projetos img{
+    width: 200px;
+    height: 200px;
+}
+
+
+  @media (max-width: 600px) {
+
+    body {
+        background: linear-gradient(to bottom,#141C47 74%, #5FDD74 26%);
+    }
+    .container{
+       flex-direction: column;
+    }
+    .content{
+        width: 100%;
+        height: 70%;
+        
+       justify-content:space-evenly ;
+    }
+    .foto{
+        height: 180px;
+        width: 180px;
+    }
+    .hamburguer div {
+        background-color: #5FDD74;
+    }
+    main h1{
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #5FDD74;
+    }
+
+    footer{
+        width: 90%;
+        margin: 10px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+}
